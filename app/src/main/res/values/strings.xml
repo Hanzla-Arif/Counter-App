@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CounterApp</string>
+    <string name="counter_app">Counter App</string>
+    <string name="enter_your_number">Enter your Number</string>
+    <string name="result">Result</string>
+    <string name="add">Add</string>
+    <string name="subtract">Subtract</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Result</string>
+    <string name="reset">Reset</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainFragment">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCountertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/counter_app"
+        android:textSize="40sp"
+        android:textStyle="italic"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="@string/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCountertext" />
+
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/add"
+        app:layout_constraintStart_toStartOf="@+id/txtResult"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+
+    <Button
+        android:id="@+id/subtract"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/subtract"
+        app:layout_constraintEnd_toEndOf="@+id/txtResult"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:hint="@string/reset"
+        app:layout_constraintEnd_toEndOf="@+id/add"
+        app:layout_constraintStart_toStartOf="@+id/subtract"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/next_ic" />
+</androidx.constraintlayout.widget.ConstraintLayout>
