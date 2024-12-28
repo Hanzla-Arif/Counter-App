@@ -12,20 +12,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-black"
         android:text="@string/counter_app"
         android:textSize="40sp"
         android:textStyle="italic"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+
+
+    <include
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        layout="@layout/layout_targetscrore"
+        android:background="@drawable/circle"
         android:layout_marginTop="50dp"
-        android:hint="@string/result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCountertext" />
@@ -33,31 +37,37 @@
 
     <Button
         android:id="@+id/add"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:background="@drawable/circle"
+        android:layout_margin="20dp"
         android:hint="@string/add"
+        app:layout_constraintEnd_toEndOf="@+id/txtResult"
         app:layout_constraintStart_toStartOf="@+id/txtResult"
         app:layout_constraintTop_toBottomOf="@+id/txtResult" />
 
     <Button
         android:id="@+id/subtract"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/circle"
         android:hint="@string/subtract"
-        app:layout_constraintEnd_toEndOf="@+id/txtResult"
-        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+        app:layout_constraintStart_toStartOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/add" />
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/circle"
         android:hint="@string/reset"
-        app:layout_constraintEnd_toEndOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="@+id/subtract"
         app:layout_constraintStart_toStartOf="@+id/subtract"
-        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+        app:layout_constraintTop_toBottomOf="@+id/subtract" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nextBtn"

@@ -2,7 +2,7 @@ package com.example.counterapp.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.counterapp.Events
+import com.example.counterapp.event.Events
 import com.example.counterapp.dataclass.Numbers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,9 +18,10 @@ class MainViewModel : ViewModel() {
         when (event) {
             Events.Addition -> {
                 if (currentValues.value.number<100){
-                counter++
-                currentValues.value = Numbers(counter)
-                sendValue(currentValues.value.number)
+                   counter++
+                  currentValues.value = Numbers(counter)
+                 sendValue(currentValues.value.number)
+
             }
         }
 
@@ -41,6 +42,9 @@ class MainViewModel : ViewModel() {
     }
 
 }
+
+
+
 
 private fun sendValue(value: Int) {
     viewModelScope.launch {
