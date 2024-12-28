@@ -35,36 +35,36 @@
         app:layout_constraintTop_toBottomOf="@+id/txtCountertext" />
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/circle"
         android:layout_margin="20dp"
-        android:hint="@string/add"
+        android:text="@string/add"
         app:layout_constraintEnd_toEndOf="@+id/txtResult"
         app:layout_constraintStart_toStartOf="@+id/txtResult"
         app:layout_constraintTop_toBottomOf="@+id/txtResult" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/subtract"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:padding="10dp"
         android:background="@drawable/circle"
-        android:hint="@string/subtract"
+        android:text="@string/subtract"
         app:layout_constraintStart_toStartOf="@+id/add"
         app:layout_constraintEnd_toEndOf="@+id/add"
         app:layout_constraintTop_toBottomOf="@+id/add" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/circle"
-        android:hint="@string/reset"
+        android:text="@string/reset"
         app:layout_constraintEnd_toEndOf="@+id/subtract"
         app:layout_constraintStart_toStartOf="@+id/subtract"
         app:layout_constraintTop_toBottomOf="@+id/subtract" />
@@ -77,5 +77,6 @@
         android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/next_ic" />
+        app:srcCompat="@drawable/next_ic"
+        android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
